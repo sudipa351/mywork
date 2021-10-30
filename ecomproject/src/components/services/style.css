@@ -1,0 +1,54 @@
+.services h1 {
+    margin: 20px auto;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.serviceCard {
+    /* border: 1px solid #ddd; */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.serviceCard .serviceCard-head {
+    background-color: #333;
+    padding: 10px;
+    color: rgba(221, 221, 221, 0.822);
+}
+
+.serviceCard .serviceCard-body {
+    padding: 20px;
+    font-size: .9rem;
+}
+.serviceCard .serviceCard-body button {
+    padding: 10px;
+    background-color: #333;
+    color: rgba(221, 221, 221, 0.822);
+    border: none;
+    outline: none;
+    width: 150px;
+    max-width: 100%;
+    margin: 10px auto;
+    font-size: 1rem;
+}
+.serviceCard-body button:hover,
+.serviceCard-body button:focus,
+.serviceCard-body button:active {
+    background-color: royalblue;
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .serviceCard {
+        width: calc(50% - 40px);
+    }
+}
+@media screen and (min-width: 1024px) {
+    .serviceCard {
+        width: calc(33% - 40px);
+    }
+}

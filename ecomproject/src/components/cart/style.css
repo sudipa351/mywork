@@ -1,0 +1,130 @@
+.cart .banner {
+    text-align: center;
+    background-color: tomato;
+    color: rgb(37, 37, 37);
+    height: 150px;
+    padding: 20px;
+}
+.cart .cartDeck {
+    margin: 10px auto;
+    width: 95%;
+}
+
+.cartDeck .cardBlock {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.productCard {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.productCard:not(:last-child) {
+    border-bottom: 2px solid #ddd;
+}
+.productCard .pDetail {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+}
+.productCard img {
+    width: 100px;
+}
+.productCard .pDetail .delItemBtn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: red;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.productCard .pDetail .delItemBtn:hover{
+    color: maroon;
+}
+.productCard .pDetail .delItemBtn:active{
+    color: royalblue;
+}
+
+.pQty {
+    text-align: center;
+}
+.cart .productCard .pQty p {
+    background-color: #ddd;
+    width: 50px;
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+.cart .completeCart {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+dl {
+    display: grid;
+    grid-template-columns: auto auto;
+    line-height: 1.5;
+    margin: 10px auto;
+}
+dd {
+    text-align: end;
+}
+
+.cart .goCheckoutBtn {
+    background-color: rgb(35, 145, 196);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+.cart .goCheckoutBtn:hover {
+    background-color: rgb(17, 137, 192);
+    color: #ddd;
+}
+.cart .goCheckoutBtn span {
+    margin-left: 5px;
+}
+
+@media screen and (min-width: 765px) {
+    .cart .banner {
+        height: 200px;
+        padding: 20px;
+        font-size: 2.5rem;
+    }
+    .cart .cartDeck {
+        margin: 50px auto;
+        width: 95%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 10px;
+        align-items: flex-start;
+    }
+    .cart .productCard {
+        margin-top: 10px;
+        padding: 20px;
+    }
+    .cart .productCard img {
+        width: 150px;
+    }
+    .cart .pDetail .image {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cart .productCard {
+        padding: 20px;
+    }
+    .cart .productCard img {
+        width: 150px;
+    }
+    .cart .pDetail .image {
+        margin-right: 10px;
+    }
+}

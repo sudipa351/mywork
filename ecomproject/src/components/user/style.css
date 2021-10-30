@@ -1,0 +1,219 @@
+.userLogin {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9), transparent), url('city.jpg');
+    background-size: cover;
+    place-items: center;
+    min-height: 50vh;
+    display: grid;
+    color: #ddd;
+}
+input, button {
+    outline: none;
+}
+
+.userLogin .contentSec {
+    display: none;
+    width: 100%;
+    grid-row-gap: 20px;
+    margin: 0 auto;
+}
+.userLogin .contentSec p {
+    width: 90%;
+    margin: 20px 0;
+}
+
+.userLogin .socialSec {
+    display: flex;
+}
+.userLogin .socialIcon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    transition: all 0.2s ease;
+}
+.userLogin .socialIcon:hover {
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+.socialIcon.fb:hover {
+    background-color: royalblue;
+}
+.socialIcon.twt:hover {
+    background-color: rgb(21, 203, 248);
+}
+.socialIcon.insta:hover {
+    background-color: crimson;
+}
+.socialIcon.yt:hover {
+    background-color: red;
+}
+
+.userLogin .loginSec,
+.userSignUp .signUpSec {
+    display: grid;
+    grid-row-gap: 20px;
+    margin: 0 auto;
+}
+.loginSec form {
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.loginSec input,
+.signUpSec input {
+    padding: 10px;
+    border: none;
+    letter-spacing: 1px;
+}
+.loginSec .rememberMe,
+.signUpSec .rememberMe {
+    display: flex;
+    align-items: center;
+}
+.lostPass:hover {
+    color: rgb(176, 197, 236);
+    text-decoration: underline;
+}
+.rememberMe input {
+    margin-right: 10px;
+}
+.loginSec .input-section,
+.signUpSec .input-section {
+    display: grid;
+    grid-row-gap: 5px;
+}
+.userLogin h2 {text-align: center;}
+
+.loginSec form button,
+.signUpSec form button {
+    padding: 10px;
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-size: 1.2rem;
+}
+.signUpSec form button {
+    margin: 20px auto;
+    width: 200px;
+    background-color: rgb(39, 86, 230);
+}
+.loginSec form button:hover {
+    background-color: rgb(190, 17, 52);
+}
+.loginSec .normalLink {
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+@media screen and (min-width: 765px) {
+
+    .userLogin .loginSec {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .userLogin .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        height: 78vh;
+    }
+    .userSignUp .container {width: 100%;}
+    .userLogin .loginSec {
+        width: 80%;
+    }
+    .userLogin .contentSec {
+        display: block;
+        width: 90%;
+        height: 100%;
+    }
+
+}
+
+
+/* Registration Form */
+
+.userSignUp .container {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    background-color: #fff;
+    margin: 20px auto;
+    width: 90%;
+    display: flex;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.userSignUp h2 {
+    position: relative;
+    padding: 20px 0 5px;
+}
+.userSignUp h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid royalblue;
+    width: 0%;
+    animation: growLine 2s linear alternate infinite;
+}
+@keyframes growLine {
+    to {
+        width: 50%;
+    }
+}
+.userSignUp .contentSec {
+    width: 60%;
+    background-image: url('city.jpg');
+    background-size: cover;
+}
+.userSignUp .signUpSec {
+    margin-left: 10px;
+}
+.userSignUp form {
+    display: block;
+}
+.userSignUp .input-section {
+    margin-bottom: 20px;
+}
+.userSignUp input {
+    border-bottom: 2px solid rgba(116, 115, 115, 0.671);
+    padding: 5px 0;
+    color: rgba(116, 115, 115, 0.671);
+}
+.userSignUp input:focus {
+    border-color: rgb(7, 85, 85);
+}
+.userSignUp input + label.lbl {
+    transform: translate(5px, -30px);
+    pointer-events: none;
+}
+.userSignUp input:focus + label.lbl,
+.userSignUp input:valid + label.lbl {
+    transform: translate(0, -50px);
+    transition: all 0.4s ease;
+}
+.userSignUp label {
+    font-weight: 600;
+}
+.userSignUp input[type="radio"] {
+    margin-right: 10px;
+}
+    .userSignUp input[type="radio"]:last-of-type {
+    margin-left: 20px;
+}
+.userSignUp .signIn {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .userSignUp .container {
+        display: block;
+    }
+    .userSignUp .container .signUpSec {
+        margin: 10px auto;
+    }
+}
